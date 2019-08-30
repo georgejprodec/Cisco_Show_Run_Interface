@@ -3,9 +3,11 @@
   connection: local
   tasks:
   - name: Verify VLAN
-     ios_command:
-       commands: 
+    ios_command:
+      commands: 
          - show run int {{ interface }}          
-     register: int
+    register: int
 
-   - debug: var=int.stdout_lines
+  - name: Print output
+    debug:
+       var: "output.stdout_lines"
