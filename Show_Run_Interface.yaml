@@ -2,11 +2,11 @@
 - hosts: all
   connection: local
   tasks:
-  - name: Verify VLAN
+  - name: Show_Run_Interface
     ios_command:
       commands: 
          - show run int {{ interface }}          
-    register: int
+    register: interface
 
   - name: Print output
     debug:
