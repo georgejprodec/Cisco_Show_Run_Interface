@@ -8,6 +8,6 @@
          - show run int {{ interface }}          
     register: interface
 
-  - name: Print output
+  - name: Print interface
     debug:
        var: "output.stdout_lines"
