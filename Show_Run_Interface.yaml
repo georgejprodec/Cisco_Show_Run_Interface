@@ -6,8 +6,8 @@
     ios_command:
       commands: 
          - show run int {{ interface }}          
-    register: interface
+    register: output
 
-  - name: Print interface
+  - name: Print output
     debug:
        var: "output.stdout_lines"
